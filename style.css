@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/Inter-Bold.woff2') format('woff2'),
+      url('./assets/Inter-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/Inter-Regular.woff2') format('woff2'),
+      url('./assets/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+
+}
+
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: normal;
+  background-color: #1A1A1A;
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background: #0D0D0D;
+  text-align: center;
+  padding-top: 72px;
+}
+
+.header__logo {
+  width: 126px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  display: block;
+}
+
+.btn {
+  background: #1E6F9F;
+  border-radius: 8px;
+  padding: 16px;
+  color: #F2F2F2;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.btn:hover {
+  background: #4EA8DE;
+}
+
+.btn-icon {
+  width: 16px;
+  margin-left: 8px;
+}
+
+form {
+  font-size: 16px;
+  transform: translateY(50%);
+}
+
+input[type="text"] {
+  border: 1px solid #0D0D0D;
+  border-radius: 8px;
+  padding: 16px;
+  outline: none;
+  background: #262626 ;
+  color: #F2F2F2;
+  max-width: 638px;
+  width: 100%;
+  margin-right: 8px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #5E60CE;
+}
+
+::placeholder {
+  color: #808080;
+}
+
+.body {
+  padding: 90px 0;
+  margin: 0 auto;
+  max-width: 736px;
+  width: 100%;
+  color: #fff;
+}
+
+.todo-empty img {
+  width: 56px;
+}
+
+.dashboard__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-empty {
+  padding: 60px 24px;
+  text-align: center;
+  color: #808080;
+  font-size: 16px;
+}
+
+.descript-emty {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.todo-empty img {
+  margin-bottom: 16px;
+}
+
+.todo-empty h3,
+.created-tasks h3 {
+  color: #4EA8DE;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.created-tasks--completed h3{
+  color: #8284FA;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.created-tasks span,
+.created-tasks--completed span {
+  border-radius: 100px;
+  padding: 2px 8px;
+  background: #333333;
+  font-weight: 700;
+  font-size: 12px;
+  color: #D9D9D9;
+}
+
+.todo {
+  padding-top: 24px;
+}
+
+.todo-list {
+  display: grid;
+  grid-gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  color: #262626;
+  border: 1px solid #333333;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.todo-message {
+  flex: 1;
+  padding: 0 12px;
+  color: #F2F2F2;
+}
+
+.delete-icon {
+  color: #808080;
+}
+
+.delete-icon:hover {
+  color: #E25858;
+}
+
