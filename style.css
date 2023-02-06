@@ -41,6 +41,10 @@ body {
   display: none;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-inline-center {
   display: inline-flex;
   justify-content: center;
@@ -63,7 +67,7 @@ body {
 .btn {
   background: #1E6F9F;
   border-radius: 8px;
-  padding: 16px;
+  padding: 0 16px;
   color: #F2F2F2;
   outline: none;
   border: none;
@@ -71,6 +75,8 @@ body {
   transition: all 0.2s ease;
   font-size: 14px;
   line-height: 1.4em;
+  height: 52px;
+  width: 100px;
 }
 
 .btn:hover {
@@ -88,7 +94,7 @@ form {
 }
 
 input[type="text"] {
-  border: 1px solid #0D0D0D;
+  border: none;
   border-radius: 8px;
   padding: 16px;
   outline: none;
@@ -97,6 +103,7 @@ input[type="text"] {
   max-width: 638px;
   width: 100%;
   margin-right: 8px;
+  height: 52px;
 }
 
 input[type="text"]:focus {
@@ -140,18 +147,20 @@ input[type="text"]:focus {
   margin-bottom: 16px;
 }
 
+.created-tasks--completed h3,
 .todo-empty h3,
 .created-tasks h3 {
-  color: #4EA8DE;
   display: inline-block;
   margin-right: 8px;
   font-size: 14px;
 }
 
+.todo-empty h3,
+.created-tasks h3 {
+  color: #4EA8DE;
+}
 .created-tasks--completed h3{
   color: #8284FA;
-  display: inline-block;
-  margin-right: 8px;
 }
 
 .created-tasks span,
@@ -196,4 +205,66 @@ input[type="text"]:focus {
 .delete-icon:hover {
   color: #E25858;
 }
+
+.btn-edit {
+  color: #808080;
+  margin-right: 8px;
+  padding: 4px;
+}
+
+.btn-edit,
+.btn-delete {
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+
+}
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 13.45px;
+  height: 13.45px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50px;
+  border: 2px solid #4EA8DE;
+}
+input[type=checkbox]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 17.45px;
+  height: 17.45px;
+  top: 3px;
+  left: 3px;
+  background: #5E60CE;
+  border: none;
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+
+input[type=checkbox]:checked ~ .todo-message {
+  text-decoration: line-through;
+  color: #808080;
+}
+
 
