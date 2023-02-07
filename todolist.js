@@ -7,7 +7,6 @@ class ToDoList {
     this.createdTasks         = document.querySelector('.created-tasks span');
     this.completedTasks       = document.querySelector('.created-tasks--completed span');
     this.tasks                = [];
-    this.isStatusChecked      = false;
     this.numberTaskCompleted  = 0;
 
     this.handleEvent();
