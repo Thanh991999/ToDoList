@@ -212,6 +212,10 @@ input[type="text"]:focus {
   padding: 4px;
 }
 
+.btn-delete {
+  color: #808080;
+}
+
 .btn-edit,
 .btn-delete {
   cursor: pointer;
